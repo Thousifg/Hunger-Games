@@ -91,7 +91,7 @@ export default function Restaurant() {
   let data = 0;
   return (
     <>
-    <h2>Add Hotel</h2>
+      <h2>Add Hotel</h2>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -186,24 +186,37 @@ export default function Restaurant() {
           placeholder="Add Hotel"
           onChange={handleChange}
         />
-        
       </form>
-      
+
       <div className="ratings">
-      <input className="submit" type="submit" value="submit" />
+        <input className="submit" type="submit" value="submit" />
         <h2>Sort By Ratings</h2>
-        <button className="stars" onClick={sortin}>Sort by Ratings</button>
-        <button className="stars" onClick={oneStar}>1 star</button>
-        <button className="stars" onClick={twoStar}>2 star</button>
-        <button className="stars" onClick={threeStar}>3 star</button>
-        <button className="stars" onClick={fourStar}>4 star</button>
+        <button className="stars" onClick={sortin}>
+          Sort by Ratings
+        </button>
+        <button className="stars" onClick={oneStar}>
+          1 star
+        </button>
+        <button className="stars" onClick={twoStar}>
+          2 star
+        </button>
+        <button className="stars" onClick={threeStar}>
+          3 star
+        </button>
+        <button className="stars" onClick={fourStar}>
+          4 star
+        </button>
         <h2>Sort By Pricing per two Heads</h2>
-        <button className="stars" onClick={lh}>low to high</button>
-        <button className="stars" onClick={hl}>high to low</button>
+        <button className="stars" onClick={lh}>
+          low to high
+        </button>
+        <button className="stars" onClick={hl}>
+          high to low
+        </button>
         <h2>Restaurant Payments</h2>
-        <button className="stars" >Cash</button>
-        <button className="stars" >Card</button>
-        <button className="stars" >All</button>
+        <button className="stars">Cash</button>
+        <button className="stars">Card</button>
+        <button className="stars">All</button>
       </div>
 
       <div className="main">
