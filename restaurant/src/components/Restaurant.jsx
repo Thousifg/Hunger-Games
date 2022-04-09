@@ -221,7 +221,7 @@ export default function Restaurant() {
       <div className="main">
         {item.map((e) => (
           <div className="parent" key={e.id}>
-            <img className="image" src={e.image} alt="Noimage" />
+            <img className="image" src={e.image} alt="" />
 
             <div className="fchild">
               <div className="name">{e.name}</div>

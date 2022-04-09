@@ -2,10 +2,10 @@
   font-family: sans-serif;
 }
 .main {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-gap: 5%;
-  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3%;
 }
 
 .parent {
@@ -213,4 +213,7 @@ form {
   padding-bottom: 10px;
 }
 
+.pagi{
+    margin-top: 3%;
+}
 
