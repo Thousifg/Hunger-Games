@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./res.css";
-// import pagination from "./pagination";
+import { Pagination } from "./Pagination";
 
 export default function Restaurant() {
   const [text, setText] = useState("");
   const [todolist, setTodolist] = useState([]);
   const [formData, setFormData] = useState({});
-  const [perpage, setPerpage] = useState([]);
+    const [item, setItem] = useState([]);
 
   useEffect(() => {
     getRestaurant();
@@ -88,7 +88,6 @@ export default function Restaurant() {
   //      }
   //   }
   //   paymentsfilter()
-  let data = 0;
   return (
     <>
       <h2>Add Hotel</h2>
@@ -220,9 +219,9 @@ export default function Restaurant() {
       </div>
 
       <div className="main">
-        {todolist.map((e) => (
+        {item.map((e) => (
           <div className="parent" key={e.id}>
-            <img className="image" src={e.image} alt="jjdnj" />
+            <img className="image" src={e.image} alt="Noimage" />
 
             <div className="fchild">
               <div className="name">{e.name}</div>
@@ -245,15 +244,8 @@ export default function Restaurant() {
             </div>
           </div>
         ))}
-        <div className="pagination">
-          {data.length >= 1}
-          <div>
-            {perpage.map((post) => (
-              <div className="post">{post.title}</div>
-            ))}{" "}
-            <br />
-            <pagination />
-          </div>
+        <div className="pagi">
+          <Pagination users={todolist} setCurrentUsers={setItem}/>
         </div>
       </div>
     </>
